@@ -1,66 +1,60 @@
-## Foundry
+📈 OrderBook DApp
+Bienvenue dans le projet OrderBook ! Ce projet consiste en une application décentralisée (DApp) qui permet aux utilisateurs de passer et de gérer des ordres d'achat et de vente de tokens ERC20 sur la blockchain.
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+🚀 Fonctionnalités
+Gestion des Ordres : Placez des ordres d'achat et de vente pour échanger des tokens.
+Matching d'Ordres : Alignez automatiquement les ordres d'achat et de vente pour faciliter les échanges.
+Annulation d'Ordres : Annulez des ordres actifs à tout moment.
+Tokens ERC20 : Utilisez des tokens ERC20 comme actifs sous-jacents pour les échanges.
+🛠️ Technologies Utilisées
+Solidity : Langage de programmation pour développer des smart contracts.
+Foundry : Cadre de développement pour écrire, tester et déployer des smart contracts.
+OpenZeppelin : Bibliothèque pour les contrats intelligents sécurisés, y compris les tokens ERC20.
+⚙️ Installation
+Clonez le dépôt :
 
-Foundry consists of:
+bash
+Copier le code
+git clone https://github.com/Yassine94110/order_book.git
+cd orderbook
+Installez les dépendances :
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+bash
+Copier le code
+forge install
+Configurez votre fichier .env avec vos clés privées et les URL RPC :
 
-## Documentation
+plaintext
+Copier le code
+WALLET_PRIVATE_KEY=your_private_key
+SEPOLIA_RPC_URL=https://your_rpc_url
+📝 Utilisation
+Déployez le contrat OrderBook :
 
-https://book.getfoundry.sh/
+Pour déployer le contrat sur le réseau de test Sepolia, exécutez :
 
-## Usage
+bash
+Copier le code
+forge script script/OrderBookScript.s.sol --rpc-url $SEPOLIA_RPC_URL --private-key $WALLET_PRIVATE_KEY --broadcast
+Interagissez avec le contrat :
 
-### Build
+Utilisez l'interface utilisateur ou un outil comme Remix ou Hardhat pour interagir avec les fonctionnalités de votre OrderBook.
 
-```shell
-$ forge build
-```
+🧪 Tests
+Pour exécuter les tests, utilisez la commande suivante :
 
-### Test
+bash
+Copier le code
+forge test
+📄 Contribuer
+Les contributions sont les bienvenues ! Si vous souhaitez améliorer ce projet, veuillez suivre ces étapes :
 
-```shell
-$ forge test
-```
+Forkez le projet.
+Créez votre branche (git checkout -b feature/nouvelle-fonctionnalité).
+Commitez vos modifications (git commit -m 'Ajout d\'une nouvelle fonctionnalité').
+Poussez votre branche (git push origin feature/nouvelle-fonctionnalité).
+Ouvrez une Pull Request.
 
-### Format
 
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+🎉 Remerciements
+Merci d'avoir consulté le projet OrderBook ! Votre soutien est grandement apprécié. 🚀
